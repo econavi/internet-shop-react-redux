@@ -27,6 +27,7 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
+      <Layout />
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
