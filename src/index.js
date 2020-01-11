@@ -17,8 +17,6 @@ import Layout from 'containers/layout'
 const history = createBrowserHistory()
 const middlewares = [thunk, routerMiddleware(history)]
 
-// В createStore первым параметром передается главный reducer, остальными параметрами middlewars
-// applyMiddleware — используется, что бы применить все middlewars, применяет по очереди из массива
 const store = createStore(
   createRootReduser(history),
   composeWithDevTools(applyMiddleware(...middlewares))
